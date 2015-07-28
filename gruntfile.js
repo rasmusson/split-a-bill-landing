@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 				options: {
 					paths: ['css'],
 					compress: false,
-					ieCompat: true,
+					ieCompat: true
 				},
 				files: {
 					'assets/css/styles.css': 'assets/less/colors.less'
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 				options: {
 					paths: ['css'],
 					compress: true,
-					ieCompat: true,
+					ieCompat: true
 				},
 				files: {
 					'assets/css/styles.min.css': 'assets/less/styles.less'
@@ -46,9 +46,9 @@ copy: {
     files: [
       {expand: true, src: ['assets/**'], dest: 'dist/'},
 	  {expand: true, src: ['index.html'], dest: 'dist/'},
-	  {expand: true, src: ['favicon.png'], dest: 'dist/'},
-    ],
-  },
+	  {expand: true, src: ['favicon.png'], dest: 'dist/'}
+    ]
+  }
 },
     'gh-pages': {
       options: {
@@ -61,7 +61,7 @@ copy: {
 	      // lint your project's server code
 	      server: {
 	        src: [ // some example files
-	          'assets/js/scripts.js'
+	          'dist/assets/js/scripts.js'
 	        ],
 	        options: {
 		        edition: 'latest', // specify an edition of jslint or use 'dir/mycustom-jslint.js' for own path
@@ -73,11 +73,11 @@ copy: {
 	    watch: {
 	    	options: { livereload: true },
 	      	less: {
-	        	files: ['assets/**/*.less'],
-	        	tasks: ['newer:less:dev'],
+	        	files: ['dist/assets/**/*.less'],
+	        	tasks: ['newer:less:dev']
 	      	},
 	      	scripts: {
-	      		files: ['**/*.js', '*.html'],
+	      		files: ['dist/**/*.js', 'dist/*.html'],
 	      		tasks: ['jslint']
 	      	}
 	    },
@@ -88,9 +88,10 @@ copy: {
 			server: {
 				options: {
 					port: 9005,
-					base: '',
+					base: 'dist',
 					hostname: '*',
-					livereload:true
+					livereload:true,
+                    spawn: false
 				}
 			}
 		}
