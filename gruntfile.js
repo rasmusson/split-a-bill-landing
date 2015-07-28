@@ -10,8 +10,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-bumpup');
 	grunt.loadNpmTasks('grunt-jslint');
 
+	grunt.loadNpmTasks('grunt-gh-pages');
+
+   
 	// Do grunt-related things in here
-	grunt.initConfig({
+	grunt.initConfig(
+	{
 		pkg: grunt.file.readJSON('package.json'),
 		less: {
 			dev: {
@@ -35,6 +39,15 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		
+
+    'gh-pages': {
+      options: {
+        base: 'dist',
+        repo: 'https://github.com/rasmusson/split-a-bill-landing.git'
+      },
+      src: ['**']
+    },
 		jslint: { // configure the task
 	      // lint your project's server code
 	      server: {
