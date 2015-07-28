@@ -6,6 +6,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-bumpup');
 	grunt.loadNpmTasks('grunt-jslint');
@@ -40,7 +41,15 @@ module.exports = function(grunt) {
 			}
 		},
 		
-
+copy: {
+  main: {
+    files: [
+      {expand: true, src: ['assets/**'], dest: 'dist/'},
+	  {expand: true, src: ['index.html'], dest: 'dist/'},
+	  {expand: true, src: ['favicon.png'], dest: 'dist/'},
+    ],
+  },
+},
     'gh-pages': {
       options: {
         base: 'dist',
