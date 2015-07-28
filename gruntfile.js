@@ -46,7 +46,8 @@ copy: {
     files: [
       {expand: true, src: ['assets/**'], dest: 'dist/'},
 	  {expand: true, src: ['index.html'], dest: 'dist/'},
-	  {expand: true, src: ['favicon.png'], dest: 'dist/'}
+	  {expand: true, src: ['favicon.png'], dest: 'dist/'},
+      {expand: true, src: ['.gitignore'], dest: 'dist/'}
     ]
   }
 },
