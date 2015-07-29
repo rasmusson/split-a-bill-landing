@@ -1,8 +1,8 @@
 var appMaster = {
 
-    preLoader: function(){
-        imageSources = []
-        $('img').each(function() {
+    preLoader: function () {
+        imageSources = [];
+        $('img').each(function () {
             var sources = $(this).attr('src');
             imageSources.push(sources);
         });
@@ -11,9 +11,9 @@ var appMaster = {
         }
     },
 
-    smoothScroll: function() {
+    smoothScroll: function () {
         // Smooth Scrolling
-        $('a[href*=#]:not([href=#carousel-example-generic])').click(function() {
+        $('a[href*=#]:not([href=#carousel-example-generic])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 
                 var target = $(this.hash);
@@ -28,7 +28,7 @@ var appMaster = {
         });
     },
 
-    reviewsCarousel: function() {
+    reviewsCarousel: function () {
         // Reviews Carousel
         $('.review-filtering').slick({
             slidesToShow: 1,
@@ -40,7 +40,7 @@ var appMaster = {
         });
     },
 
-    screensCarousel: function() {
+    screensCarousel: function () {
         // Screens Carousel
         $('.filtering').slick({
             slidesToShow: 4,
@@ -69,25 +69,25 @@ var appMaster = {
             }]
         });
 
-        $('.js-filter-all').on('click', function() {
+        $('.js-filter-all').on('click', function () {
             $('.filtering').slickUnfilter();
             $('.filter a').removeClass('active');
             $(this).addClass('active');
         });
 
-        $('.js-filter-one').on('click', function() {
+        $('.js-filter-one').on('click', function () {
             $('.filtering').slickFilter('.one');
             $('.filter a').removeClass('active');
             $(this).addClass('active');
         });
 
-        $('.js-filter-two').on('click', function() {
+        $('.js-filter-two').on('click', function () {
             $('.filtering').slickFilter('.two');
             $('.filter a').removeClass('active');
             $(this).addClass('active');
         });
 
-        $('.js-filter-three').on('click', function() {
+        $('.js-filter-three').on('click', function () {
             $('.filtering').slickFilter('.three');
             $('.filter a').removeClass('active');
             $(this).addClass('active');
@@ -95,12 +95,12 @@ var appMaster = {
 
     },
 
-    animateScript: function() {
-        $('.scrollpoint.sp-effect1').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInLeft');},{offset:'100%'});
-        $('.scrollpoint.sp-effect2').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInRight');},{offset:'100%'});
-        $('.scrollpoint.sp-effect3').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInDown');},{offset:'100%'});
-        $('.scrollpoint.sp-effect4').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeIn');},{offset:'100%'});
-        $('.scrollpoint.sp-effect5').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('animated fadeInUp');},{offset:'100%'});
+    animateScript: function () {
+        $('.scrollpoint.sp-effect1').waypoint(function (){$(this).toggleClass('active');$(this).toggleClass('animated fadeInLeft');},{offset:'100%'});
+        $('.scrollpoint.sp-effect2').waypoint(function (){$(this).toggleClass('active');$(this).toggleClass('animated fadeInRight');},{offset:'100%'});
+        $('.scrollpoint.sp-effect3').waypoint(function (){$(this).toggleClass('active');$(this).toggleClass('animated fadeInDown');},{offset:'100%'});
+        $('.scrollpoint.sp-effect4').waypoint(function (){$(this).toggleClass('active');$(this).toggleClass('animated fadeIn');},{offset:'100%'});
+        $('.scrollpoint.sp-effect5').waypoint(function (){$(this).toggleClass('active');$(this).toggleClass('animated fadeInUp');},{offset:'100%'});
     },
 
     revSlider: function() {
