@@ -47,7 +47,8 @@ copy: {
       {expand: true, src: ['assets/**'], dest: 'dist/'},
 	  {expand: true, src: ['index.html'], dest: 'dist/'},
 	  {expand: true, src: ['favicon.png'], dest: 'dist/'},
-      {expand: true, src: ['.gitignore'], dest: 'dist/'}
+      {expand: true, src: ['.gitignore'], dest: 'dist/'},
+      {expand: true, src: ['googlecab0a4275fc793cb.html'], dest: 'dist/'}
     ]
   }
 },
