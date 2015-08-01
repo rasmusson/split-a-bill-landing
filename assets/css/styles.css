@@ -623,7 +623,8 @@ form textarea.form-control {
     left: 0;
   }
   .contact-details {
-    margin-top: 20px;
+      text-align: center;
+      margin-top: 20px;
   }
   header .navbar-default {
     padding: 20px;
