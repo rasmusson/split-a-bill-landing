@@ -538,6 +538,17 @@ section::after {
   font-weight: 400;
   font-weight: 300;
 }
+.tp-caption.large_white_bold.visible-xs {
+  color: #ffffff;
+  font-size: 100px;
+  font-weight: 400;
+}
+.tp-caption.large_white_light.visible-xs {
+  color: #ffffff;
+  font-size: 100px;
+  font-weight: 400;
+  font-weight: 300;
+}
 .btn {
   -webkit-border-radius: 3em;
   -moz-border-radius: 3em;
