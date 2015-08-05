@@ -7,6 +7,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-bumpup');
 	grunt.loadNpmTasks('grunt-jslint');
@@ -40,7 +41,8 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		
+	
+clean: ["dist"],	
 copy: {
   main: {
     files: [
@@ -100,7 +102,7 @@ copy: {
 		}
 	});
 
-	grunt.task.registerTask('default', 'jslint');
-	grunt.task.registerTask('default', ['connect','watch']);
+	grunt.task.registerTask('pub', ['clean', 'copy', 'gh-pages']);
+	grunt.task.registerTask('default', ['clean', 'copy', 'connect','watch']);
 
 };
