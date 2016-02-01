@@ -17,6 +17,7 @@ module.exports = function(grunt) {
 	// Do grunt-related things in here
 	grunt.initConfig(
 	{
+	
 		pkg: grunt.file.readJSON('package.json'),
 		less: {
 			dev: {
@@ -93,6 +94,7 @@ copy: {
 					base: 'dist',
 					hostname: '*',
 					livereload:true,
+					keepalive: true,
                     spawn: false
 				}
 			}
